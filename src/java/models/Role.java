@@ -5,10 +5,24 @@
  */
 package models;
 
+import java.io.Serializable;
+
 /**
  *
  * @author 816386
  */
-public class Role {
-    
+public class Role implements Serializable {
+     private String role;
+     
+      public Role() {
+    }
+     public Role( String role) {
+        this.role = role;
+
+    }
+     
+     @Override
+    public String toString() {
+        return role;
+    }
 }

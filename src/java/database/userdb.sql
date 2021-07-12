@@ -1,17 +1,17 @@
-DROP SCHEMA IF EXISTS `userdb`;
+DROP SCHEMA IF EXISTS `lab7db`;
 
-CREATE SCHEMA IF NOT EXISTS `userdb` DEFAULT CHARACTER SET latin1;
+CREATE SCHEMA IF NOT EXISTS `lab7db` DEFAULT CHARACTER SET latin1;
 
-USE `userdb`;
+USE `lab7db`;
 
-
--- -----------------------------------------------------
-
--- Table `userdb`.`role`
 
 -- -----------------------------------------------------
 
-CREATE TABLE IF NOT EXISTS `userdb`.`role` (
+-- Table `lab7db`.`role`
+
+-- -----------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS `lab7db`.`role` (
 
 `role_id` INT(11) NOT NULL,
 
@@ -22,11 +22,11 @@ PRIMARY KEY (`role_id`));
 
 -- -----------------------------------------------------
 
--- Table `userdb`.`user`
+-- Table `lab7db`.`user`
 
 -- -----------------------------------------------------
 
-CREATE TABLE IF NOT EXISTS `userdb`.`user` (
+CREATE TABLE IF NOT EXISTS `lab7db`.`user` (
 
 `email` VARCHAR(40) NOT NULL,
 
@@ -46,7 +46,7 @@ CONSTRAINT `fk_user_role`
 
 FOREIGN KEY (`role`)
 
-REFERENCES `userdb`.`role` (`role_id`));
+REFERENCES `lab7db`.`role` (`role_id`));
 
 
 
